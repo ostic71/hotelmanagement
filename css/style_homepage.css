@@ -31,13 +31,14 @@ body{
     align-items: center;
     padding: 0 20px; /* Add padding to the sides */
     background-color: transparent;
-    border-bottom: 1px solid #852525;
+    /* border-bottom: 1px solid #852525; */
 }
 
 .mainbody {
     display: flex;
     flex: 1;
     background-color: transparent;
+    flex-direction: row;
 }
 
 
@@ -92,6 +93,7 @@ body{
 
 .list-item {
     left: 40;
+    text-align: center;
     /*background-color: #f0f0f0; Background color of each list item */
     padding: 20px; /* Padding around the clickable area */
     margin-bottom: 5px; /* Spacing between list items */
@@ -102,4 +104,12 @@ body{
 
 .list-item:hover {
     background-color: #b6cbee; /* Change background color on hover for visual feedback */
+}
+
+.panel {
+    background-color: #ffffff;
+    flex : 1;
+    border-radius: 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
