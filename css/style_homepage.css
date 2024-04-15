@@ -82,8 +82,8 @@ body{
 .vertical-list {
     list-style-type: none; /* Remove default list styles */
     padding: 0; /* Remove default padding */
-    width: 20%;
-    background-color: aqua;
+    width: 15%;
+    /* background-color: aqua; */
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -91,7 +91,8 @@ body{
 }
 
 .list-item {
-    background-color: #f0f0f0; /* Background color of each list item */
+    left: 40;
+    /*background-color: #f0f0f0; Background color of each list item */
     padding: 20px; /* Padding around the clickable area */
     margin-bottom: 5px; /* Spacing between list items */
     border-radius: 5px; /* Rounded corners for the clickable box */
@@ -100,5 +101,5 @@ body{
 }
 
 .list-item:hover {
-    background-color: #e0e0e0; /* Change background color on hover for visual feedback */
+    background-color: #b6cbee; /* Change background color on hover for visual feedback */
 }
