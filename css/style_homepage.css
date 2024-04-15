@@ -1,13 +1,17 @@
 
 
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    
     background: url("../images/background_home.jpeg") no-repeat;
-    background-size: cover;
-    background-position: center;
+    
+    background-size: cover; /* Ensure background image covers the entire viewport */
+    background-position: center; /* Center the background image */
+
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Set body height to 100% of viewport height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
 }
 
 
@@ -21,18 +25,19 @@ body{
 
 .header {
     display: flex;
-    background-color: transparent;
+    flex: 5%; /* Header occupies 20% of the body height */
+    max-height: 20vh;
     justify-content: space-between;
-    height: 20vh;
     align-items: center;
-    padding: 10px 20px;
-    
-    
-    position: fixed; /* Makes the header stay at the top */
-    width: 100%;
-    box-sizing: border-box; /* Ensures padding does not affect the total width */
-    top: 0;
-    left: 0;
+    padding: 0 20px; /* Add padding to the sides */
+    background-color: transparent;
+    border-bottom: 1px solid #852525;
+}
+
+.mainbody {
+    display: flex;
+    flex: 1;
+    background-color: transparent;
 }
 
 
@@ -71,8 +76,24 @@ body{
 }
 
 
-/* Additional styles */
-body {
-    margin: 0;
-    padding-top: 70px; /* Adds padding to the top of the body so content does not hide behind the fixed header */
+
+
+
+.vertical-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    width: 20%;
+    background-color: aqua;
+}
+
+.list-item {
+    background-color: #f0f0f0; /* Background color of each list item */
+    padding: 10px; /* Padding around the clickable area */
+    margin-bottom: 5px; /* Spacing between list items */
+    border-radius: 5px; /* Rounded corners for the clickable box */
+    cursor: pointer; /* Change cursor to pointer on hover to indicate clickability */
+}
+
+.list-item:hover {
+    background-color: #e0e0e0; /* Change background color on hover for visual feedback */
 }
