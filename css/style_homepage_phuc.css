@@ -1,0 +1,78 @@
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("../images/background_home.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+/* Styles for the header */
+
+
+
+
+
+.header {
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    height: 20vh;
+    align-items: center;
+    padding: 10px 20px;
+    
+    
+    position: fixed; /* Makes the header stay at the top */
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding does not affect the total width */
+    top: 0;
+    left: 0;
+}
+
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    
+    flex-grow: 1; /* Allows the logo to use any available space and center itself */
+}
+
+.logo img {
+    max-height: 100%; /* Maximum height of the logo is the full height of its container */
+    width: auto; /* Maintain the aspect ratio */
+}
+
+.logout_btn a {
+    color: #007BFF;            /* Change color for a modern blue link */
+    text-decoration: none;     /* Remove underline from the link */
+    cursor: pointer;           /* Indicate that it's clickable */
+    font-weight: bold;         /* Make the text bold */
+    background-color: #F8F8F8; /* Light grey background matching the header */
+    padding: 8px 16px;         /* Add padding for better touch area and visual appeal */
+    border-radius: 5px;        /* Rounded corners for a smoother look */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+
+    font-size: 18px;
+}
+
+.logout_btn a:hover, .logout_btn a:focus {
+    text-decoration: none;          /* Ensure no underline appears on hover */
+    background-color: #0056B3;      /* Darker blue on hover for better visibility */
+    color: #FFFFFF;                 /* White text on hover for contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+
+/* Additional styles */
+body {
+    margin: 0;
+    padding-top: 70px; /* Adds padding to the top of the body so content does not hide behind the fixed header */
+}
