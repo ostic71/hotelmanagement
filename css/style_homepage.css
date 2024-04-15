@@ -84,14 +84,19 @@ body{
     padding: 0; /* Remove default padding */
     width: 20%;
     background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    grid-template-columns: 1fr;
 }
 
 .list-item {
     background-color: #f0f0f0; /* Background color of each list item */
-    padding: 10px; /* Padding around the clickable area */
+    padding: 20px; /* Padding around the clickable area */
     margin-bottom: 5px; /* Spacing between list items */
     border-radius: 5px; /* Rounded corners for the clickable box */
     cursor: pointer; /* Change cursor to pointer on hover to indicate clickability */
+    flex: 1;
 }
 
 .list-item:hover {
