@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room info</title>
+    <link rel ="stylesheet" href = "../css/style_roominfo.css">
+</head>
+<body>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Room</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <tr>
+                <td onclick="editCell(this)"></td>
+                <td onclick="editCell(this)"></td>
+                <td onclick="editCell(this)"></td>
+                <td onclick="editCell(this)"></td>
+                <td onclick="editCell(this)"></td>
+                <td onclick="editCell(this)"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function editCell(td) {
+            var input = document.createElement('input');
+            input.value = td.innerHTML === 'Nhấn để chỉnh sửa' ? '' : td.innerHTML;
+            input.onblur = function() {
+                td.innerHTML = this.value === '' ? 'Nhấn để chỉnh sửa' : this.value;
+            };
+            td.innerHTML = '';
+            td.appendChild(input);
+            input.focus();
+        }
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Enter") {
+                var input = document.querySelector('input:focus');
+                if (input) {
+                    input.blur();
+                }
+            }
+        });
+        </script>
