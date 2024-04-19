@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel ="stylesheet" href = "../css/style_search_page.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet"> 
+</head>
+
+
+
+<body>
+    <div>
+        <form action="">
+            <h1>SEARCH</h1>
+            <div class="input-box">
+                <label for="room">Room:</label>
+                <input type="text" id="room" placeholder="Enter room name" required>
+                
+            </div>
+            <div class="input-box">
+                <label for="price">Price:</label>
+                <input type="text" id="price" placeholder="Enter price" required>
+               
+            </div>
+            <div class="input-box">
+                <label for="type">Type:</label>
+                
+                <select id="type" required>
+                    <option value="">Select type</option>
+                    <option value="Single">Single</option>
+                    <option value="Double">Double</option>
+                    <option value="Studio">Studio</option>
+                </select>
+
+
+                
+            </div>
+            <div class="input-box">
+                <label for="status">Status:</label>
+                    <select id="status" required>
+                        <option value="">Select status</option>
+                        <option value="available">Available</option>
+                        <option value="occupied">Occupied</option>
+                        <option value="maintenance">Under Maintenance</option>
+                    </select>
+            </div>
+            <button type="submit" class="btn">Search</button>
+        </form>
+        
+    </div>
+    
+</body>
+
+
+
+</html>

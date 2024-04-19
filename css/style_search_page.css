@@ -1,0 +1,77 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif; /* Sets a nice, readable default font */
+    background: #f4f4f4; /* Light gray background */
+    padding: 20px; /* Adds spacing around the page */
+}
+
+form {
+    max-width: 600px; /* Maximum width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    background: white; /* White background for the form */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow around the form */
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center; /* Center the title */
+    color: #333; /* Dark grey color for the text */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.input-box {
+    margin-bottom: 10px; /* Space between input boxes */
+}
+
+.input-box label {
+    display: block; /* Makes the label a block element */
+    margin-bottom: 5px; /* Space between label and input */
+    color: #666; /* Medium grey color */
+}
+
+
+.input-box input, .input-box select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;  /* Creates a small space between the label and the input/select */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+.btn {
+    width: 30%; /* Smaller width */
+    padding: 10px; /* Padding inside the button */
+    background-color: #0056b3; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 15px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Larger font size */
+    display: block; /* Block display to allow for margins */
+    margin: 20px 0 20px auto; /* Auto margins for horizontal centering */
+    text-align: center; /* Center text inside the button */
+}
+
+.btn:hover {
+    background-color: #003d7a; /* Darker blue on hover */
+}
+
+
+/* Add responsiveness */
+@media (max-width: 640px) {
+    body {
+        padding: 10px;
+    }
+}
