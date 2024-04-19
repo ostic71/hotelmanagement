@@ -1,0 +1,40 @@
+
+
+body{
+    
+    background: white;
+   
+    height: 100vh; /* Set body height to 100% of viewport height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+}
+.content-table thead tr{
+    border-radius: 30%;
+    background-color: lightgray;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+.content-table th,
+.content-table td {
+    padding:  12px 15px;
+}
+.content-table tbody tr {
+    background-color: white;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+
+
+
+
+/* Styles for the header */
+
+
+
+
+
