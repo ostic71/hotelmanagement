@@ -18,23 +18,29 @@
                 <th>Note</th>
             </tr>
         </thead>
-        <tbody id="tableBody">
+        <tbody class="tableBody">
             <tr>
                 <td onclick="editCell(this)"></td>
                 <td onclick="editCell(this)"></td>
-                <td onclick="editCell(this)"></td>
+                <td >
+                    <select>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select></td>
                 <td onclick="editCell(this)"></td>
                 <td onclick="editCell(this)"></td>
                 <td onclick="editCell(this)"></td>
             </tr>
         </tbody>
     </table>
+    
     <script>
         function editCell(td) {
             var input = document.createElement('input');
-            input.value = td.innerHTML === 'Nhấn để chỉnh sửa' ? '' : td.innerHTML;
+            input.value = td.innerHTML === '' ? '' : td.innerHTML;
             input.onblur = function() {
-                td.innerHTML = this.value === '' ? 'Nhấn để chỉnh sửa' : this.value;
+                td.innerHTML = this.value === '' ? '' : this.value;
             };
             td.innerHTML = '';
             td.appendChild(input);
@@ -50,3 +56,38 @@
             }
         });
         </script>
+<button onclick="addRow()"><A>Add Row</A></button>
+<button type="submit" class="btn"> <p>Submit</p></button>  
+<script>
+    // Hàm thêm hàng mới
+    function addRow() {
+    var tbody = document.querySelector('.content-table tbody');
+    var newRow = document.createElement('tr');
+    
+    // Tạo các ô và gắn sự kiện editCell()
+    for (var i = 0; i < 6; i++) {
+        var cell = document.createElement('td');
+        cell.onclick = function() {
+            editCell(this);
+        };
+
+        // Nếu ô thuộc cột "Type" (cột thứ 3), tạo dropdown
+        if (i === 2) {
+            var select = document.createElement('select');
+            var options = ['A', 'B', 'C'];
+            for (var j = 0; j < options.length; j++) {
+                var option = document.createElement('option');
+                option.value = options[j];
+                option.textContent = options[j];
+                select.appendChild(option);
+            }
+            cell.appendChild(select);
+        }
+        
+        newRow.appendChild(cell);
+    }
+    
+    tbody.appendChild(newRow);
+}
+</script>
+    

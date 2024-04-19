@@ -1,40 +1,105 @@
-
-
-body{
-    
-    background: white;
-   
-    height: 100vh; /* Set body height to 100% of viewport height */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack children vertically */
+.content-table {
+    border-radius: 4px;
+    width: 100%;
+    border-collapse: separate;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-.content-table thead tr{
-    border-radius: 30%;
-    background-color: lightgray;
-    color: #333;
-    text-align: center;
-    font-weight: bold;
+
+.content-table thead tr {
+    border-radius: 10%;
+    background-color:  #007BFF;            /* Change color for a modern blue link */
+    color: #ffffff;
+    text-align: left;
 }
+
 .content-table th,
 .content-table td {
-    padding:  12px 15px;
-}
+    padding: 12px 15px;
+    border: 1px solid #ddd; /* Đường viền cho mỗi ô */
+    border-radius: 6px;}
+
 .content-table tbody tr {
-    background-color: white;
+    border-bottom: 1px solid #dddddd;
+}
+
+
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #007BFF;            /* Change color for a modern blue link */
+    ;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #007BFF;            /* Change color for a modern blue link */
+    
+}
+
+.content-table tbody td select {
+    width: 100%;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+}
+
+/* CSS cho input khi chỉnh sửa */
+.content-table tbody td input {
+    background-color: #f2f2f2;
+    width: calc(100% - 20px);
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: inherit;
+}
+
+/* CSS cho hover */
+.content-table tbody td:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+.content-table tbody td input {
+    width: calc(100% - 20px);
+    padding: 5px 8px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: inherit;
+    background-color:#ddd; /* Màu nền cho input */
+}
+button {
+    background-color: #007BFF; /* Màu nền xanh lá */
+    border: none;
+    color: white;
+    padding: 10px 20px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px; /* Viền bo tròn */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nhẹ nhàng */
 }
-.content-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+
+button:hover {
+    background-color: #004cff; 
 }
 
 
+.btn {
+    background-color: #007BFF; 
+}
 
+.btn p {
+    margin: 0; 
+}
 
-
-/* Styles for the header */
-
-
-
-
-
+.btn:hover {
+    background-color: #004cff; 
+}
