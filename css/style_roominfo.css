@@ -10,7 +10,7 @@
 
 .content-table thead tr {
     border-radius: 10%;
-    background-color:  #007BFF;            /* Change color for a modern blue link */
+    background-color:  #007BFF;            
     color: #ffffff;
     text-align: left;
 }
@@ -49,10 +49,10 @@
 
 /* CSS cho input khi chỉnh sửa */
 .content-table tbody td input {
-    background-color: #f2f2f2;
+    background-color: #fff;
     width: calc(100% - 20px);
     padding: 5px 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: inherit;
@@ -60,7 +60,7 @@
 
 /* CSS cho hover */
 .content-table tbody td:hover {
-    background-color: lightgray;
+    background-color: #ddd;
     cursor: pointer;
 }
 .content-table tbody td input {
@@ -70,10 +70,10 @@
     border-radius: 4px;
     box-sizing: border-box;
     font-size: inherit;
-    background-color:#ddd; /* Màu nền cho input */
+    background-color:#fff; /* Màu nền cho input */
 }
 button {
-    background-color: #007BFF; /* Màu nền xanh lá */
+    background-color: #007BFF; 
     border: none;
     color: white;
     padding: 10px 20px;
